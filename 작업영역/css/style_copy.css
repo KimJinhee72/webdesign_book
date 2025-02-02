@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* 전체영역 */
+body {
+    position: relative;
+    background-color: #fff;
+}
+
+.container {
+    width: 1000px;
+    height: 650px;
+}
+
+/* 왼쪽(헤더)  */
+header {
+    float: left;
+    width: 200px;
+    height: 650px;
+}
+
+/* 로고 */
+.logo {
+    padding: 30px 0;
+}
+
+/* 메뉴 */
+.menu {
+    float: right;
+    margin-right: 30px;
+    width: 140px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(213, 173, 250);
+}
+
+.menu>ul>li {
+    width: 100%;
+    position: relative;
+}
+
+.menu>ul>li>a {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+}
+.menu>ul>li>a:hover {
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(238, 92, 162);
+}
+
+
+.sub-menu {
+    z-index: 999999999;
+    position: absolute;
+    top: 0;
+    left: 140px;
+    width: 100%;
+    float: right;
+    display: none;
+    background-color: rgb(238, 92, 162);
+}
+
+.sub-menu a {
+
+    line-height: 40px;
+}
+
+.sub-menu>li>a:hover {
+
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(250, 150, 198);
+}
+
+/* 오른쪽(메인) */
+/* 이미지슬라이드 */
+main {
+    float: right;
+    width: 800px;
+    height: 550px;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.slide h3 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 2px 7px;
+    z-index: 99;
+    border-radius: 10px;
+    background-color: rgb(252, 188, 110);
+}
+
+.slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 공지사항라인 */
+.contents {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: 200px;
+    gap:10px;
+    font-size: 14px;    
+}
+
+.contents h3 {
+    width: 90px;
+    margin-left: 5px ;
+    padding: 2px ;
+    text-align: center;    
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, .3);
+}
+.contents h3:hover{
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* 공지사항 */
+.notice {
+    width: calc((600px - 15px) / 2);
+}
+.tab ul{
+    height: 166px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+.tab> ul> li:hover a{
+    font-weight: bold;
+}
+.tab span{
+    margin-left: 20px;
+}
+/* 갤러리 */
+.gallery {
+    width: calc((600px - 15px) / 2);
+}
+.gallery a{
+    width: 100%;
+    height: 166px; 
+    padding: 30px 20px;  
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, .3);
+    
+}
+.gallery a:hover{
+    opacity: .5;
+}
+.gallery a img{
+    width: calc((100% / 3) - 5px);
+}
+
+/* 바로가기 */
+.shortcut {
+    position: relative;
+    gap: 0;
+    width: 190px;
+    height: 200px;
+    padding: 10px 0px 0px 0px;    
+}
+.shortcut h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8d8b8b;
+}
+.shortcut img{
+    overflow: hidden;
+}
+/* 모달창 */
+#modal{
+    position: absolute;
+    top:  0%;
+    left: 0%;    
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .6);
+}
+#modal.active{
+    display: block;
+}
+.modal{     
+    position: fixed;
+    top: 30%; 
+    left: 15%;
+    padding:10px;
+    z-index: 9999;    
+    background-color: rgba(255, 255, 255, 0.8) ;
+}
+#modal.active{
+    display: block;
+}
+.modal h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.modal p{
+    font-size: 20px;
+    line-height: 40px;
+}
+.modal button{
+    margin-top: 20px;
+    margin-left: 400px;
+    width: 50px;
+}
+/* 오른쪽(하단 풋터) */
+.bottom{
+    width: 800px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #ccc;
+}
+/* <!-- 하단 라인 --> */
+.bt-logo{
+    width: 200px;
+    padding: 30px 0;    
+}
+.copywright{
+    width: 400px;
+    align-items: center;
+    text-align: center;
+}
+.familysite{
+    width: 200px; 
+    line-height: 30px;
+}
+#selectlist{
+    width: 190px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+}

@@ -1,0 +1,240 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
+a{text-decoration: none; display: block; color: #333; cursor: pointer; }
+img{max-width: 100%; vertical-align: top;}
+button{cursor: pointer;}
+body{
+    width: 1000px;
+    height: 650px;
+    color: #333;
+    font-size: 20px;
+    
+}
+/* 왼쪽 헤더  */
+header{
+    float: left;
+    position: absolute;
+}
+.top{
+    float: left;
+    width: 200px;
+    height: 650px;    
+}
+ /* 로고 */
+.logo{
+    width: 200px;
+    height: 40px;
+    margin: 30px 0 ;
+}
+ /* 메뉴 */
+.menu{    
+    float: left; 
+    position: absolute;
+    top:100px;
+    left: 70px;   
+    text-align: center;
+    z-index: 99;
+
+}
+.menus> li{         
+    width: 120px;
+}
+.menus>li>a{
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    
+    border: 1px solid #333;
+}
+.menus> li > a:hover {
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+}
+.sub-menu{
+    float: left;
+    width: 180px;    
+    position: absolute;
+    top: 0;
+    left: 120px;
+    z-index: 99;    
+    background-color: #cbbfbf;
+    display: none;
+}
+.sub-menu >li> a{
+    width: 100%;
+    line-height: 55px;
+    font-size: 14px;    
+    color: #fff;
+    background-color: #af9e9e; 
+}  
+.sub-menu > li > a:hover{    
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+}
+/* 오른쪽 이미지슬라이드 */
+.imageside{
+    position: relative;
+    float: right;
+    width: 800px;
+    height: 350px;
+} 
+.slide{
+    position: absolute;
+    width: 100%;
+    height: 350px;
+}
+
+.slide h2{
+    position: absolute;
+    bottom: 0;
+    right: 0;    
+    transform: translate(-10% , -50%);
+    z-index: 99999;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #66572f;
+    padding: 0 3px 2px 3px;
+    border-radius: 5px;
+    background-color: #fad56e;
+}
+.slide img{
+    width: 100%;    
+    overflow: hidden;
+}
+/* 오른쪽 공지사항 줄 */
+.contents{
+    float: right;
+    width: 800px;
+    height: 200px;
+    display: flex;  
+    justify-content: space-between;
+}
+.contents h3{
+    width: 90px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    background-color: #7f7f7f;
+}
+.contents h3:hover{
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
+/* 공지사항 */
+.notice{
+    width: 290px;
+}
+.notice ul{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    padding: 15px;
+    font-size: 15px;
+    border: 1px solid #7f7f7f;
+}
+.notice >ul> li:hover > a{
+    font-weight: bold;
+}
+.notice span{
+    margin-left: 10px;
+}
+/* 갤러리 */
+.gallery{
+    width: calc((600px - 20px) / 2 );  
+}
+.gallery ul{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+    border: 1px solid #bebcbc;
+}
+.gallery li:hover{
+    opacity: .6;
+}
+.gallery img{
+    width: 85px;    
+}
+/* 바로가기 */
+.shortcut{
+    position: relative;
+    width: 200px; 
+}
+.shortcut:hover{
+    opacity: .6;
+}
+.shortcut h3{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+/* 모달창 */
+#modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0,0,0,.6);
+}
+#modal.active{
+    display: block;
+}
+.modal{
+    width: 550px;
+    height: 300px;
+    position: fixed;
+    top: 30%;
+    left: 15%;
+    padding: 10px;
+    background-color: rgba(225,225,225,.8);
+}
+.modal h3{
+    text-align: center;
+}
+.modal p{
+    line-height: 30px;
+    margin-top: 20px;
+}
+.modal button{
+    margin: 40px 0 30px 480px;
+}
+/* 오른쪽 풋터 */
+footer{
+    float: right;
+    width: 800px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #bebcbc;
+}
+ /* 풋터 로그 */
+.ft_logo{
+    width: calc(400px / 2 ); 
+    padding: 30px 0;
+}
+.ft-copyright{
+    width: 400px;
+    font-size: 16px; 
+    text-align: center;
+}
+.family_site{
+    width: calc(400px / 2 );
+}   
+.family_site select{
+    width: 190px;
+    height: 30px;
+    margin-left: 5px;
+}  
+.family_site option{
+    text-align: center;
+}  
