@@ -52,25 +52,26 @@ header .inner {
 
 /* 로고 */
 .logo {
-    width: 200px;
+    width: 250px;
 }
 
 .logo a {
     width: 200px;
     height: 100%;
+    margin-left: 50px;
 }
 
 /* 메뉴 */
 .menu {
     position: relative;
-    width: calc(100% - 200px);
+    width: calc(100% - 300px);
     height: 100px;
 }
 
 .nav {
     position: absolute;
     top: 58px;
-    left: 300px;
+    left: 250px;
     display: flex;
     width: 800px;
     line-height: 40px;
@@ -209,96 +210,68 @@ footer .inner {
 }
 
 /*contens  공지사항/갤러리 */
-.contents,
-c1 {
-    width: 1000px;
+.contens , .c1{
+    width: 80%;
     height: 230px;
     position: relative;
-    display: flex;
-    padding-left: 20px;
+    margin-left: 20px;
+    /* background-color: #c0c0c0; */
 }
-
-.c1 ul {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    display: none;
+.c1 h4{
+    width: 150px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 17px;
+    float: left;
+    transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.2);
 }
-
-.c1 ul.active {
+.c1 h4.active{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
     display: block;
 }
-
-.c1 h4 {
-    float: left;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    padding: 7px;
-    font-size: 17px;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.c1 h4.active {
+.c1 h4:hover{
     color: #fff;
     background-color: rgba(0, 0, 0, 0.6);
 }
-
-.c1 h4:hover {
-    font-size: 18px;
-    color: #fff;
-
-}
-
-/* 공지사항 */
-.notice {
+.c1 ul{
+    position: absolute;
+    top:40px;
     width: 100%;
-}
-
-.notice li:nth-child(even) {
-    background-color: antiquewhite;
-}
-
-.notice a {
     line-height: 40px;
-    letter-spacing: 1.3px;
+    display: none;
 }
-
-.notice li:hover {
+.c1 ul.active{
+    display: block;
+}
+/* 공지사항 */
+.notice li:nth-child(even){
+    background-color: rgba(253, 228, 118, 0.4);
+}
+.notice a:hover{
     font-weight: bold;
 }
-
-.notice em {
-    margin-left: 20px;
-}
-
 /* 갤러리 */
-.gallery {
-    width: 100%;
-    height: calc(100% - 40px);
-    position: relative;
+.gallery{
+    display: none;
 
-    margin-top: 10px;
 }
 .gallery li{
-    width: 160px;
     float: left;
-    margin-right: ;
+    margin-top: 20px;
+    margin-right: 10px;
 }
-
-
-.gallery h5 {
+.gallery a{
     position: absolute;
-    transform: translate(120%, 300%);
-
+    top: 0;
+    margin-top:40px ;
+    transform: translate(50% ,100%);
     color: #eee;
 }
-
-.gallery img {
-    width: 160px;
-
+.gallery img{
+    width: 150px;
 }
-
 
 /* 풋터 하단 */
 .ft-bottom {
@@ -309,7 +282,7 @@ c1 {
 
 /* 풋터 하단 logo(왼쪽)*/
 .ft-logo {
-    width: 200px;
+    width: 250px;
     height: 100%;
     padding: 10px 0;
     float: left;
@@ -318,11 +291,12 @@ c1 {
 .ft-logo a {
     width: 200px;
     height: 100%;
+    margin-left: 50px;
 }
 
 /* 풋터 하단 info(오른쪽) */
 .info {
-    width: calc(100% - 200px);
+    width: calc(100% - 300px);
     height: 100%;
     float: left;
     font-size: 20px;
